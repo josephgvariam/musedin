@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_in_mused_api_domain_UserConnection" modelAttribute="userConnection" path="/userconnections" render="${empty dependencies}" z="tJNGPaG/FjJlObS09QvbeUP0GOw=">
+        <field:input field="userId" id="c_in_mused_api_domain_UserConnection_userId" required="true" z="PMaQpA/RWN3684cqsdTggXw5uEE="/>
+        <field:input field="providerId" id="c_in_mused_api_domain_UserConnection_providerId" required="true" z="3d49wKOlj5kgVhpR41Bxf7MniIM="/>
+        <field:input field="providerUserId" id="c_in_mused_api_domain_UserConnection_providerUserId" z="tDIzvXkm0ev1+J8la8KpUmcu3jI="/>
+        <field:input field="rank" id="c_in_mused_api_domain_UserConnection_rank" max="9999" min="1" required="true" z="OtIvDCgDCUESSJPze6Vt3eErLk4="/>
+        <field:input field="displayName" id="c_in_mused_api_domain_UserConnection_displayName" z="3NDu6vrk812iBtrJb5bHiqPdKpE="/>
+        <field:input field="profileUrl" id="c_in_mused_api_domain_UserConnection_profileUrl" z="6IBi03VHXZXTV0+CEb9TEEJLkdo="/>
+        <field:input field="imageUrl" id="c_in_mused_api_domain_UserConnection_imageUrl" z="L1oahXVCp/EqS+A+Mb3HShf97sM="/>
+        <field:input field="accessToken" id="c_in_mused_api_domain_UserConnection_accessToken" required="true" z="E6cp23HqReW3KZHA5hCesEHiL+E="/>
+        <field:input field="secret" id="c_in_mused_api_domain_UserConnection_secret" z="4GGi2oNzCq7p0N3vSbbLzI0+zN4="/>
+        <field:input field="refreshToken" id="c_in_mused_api_domain_UserConnection_refreshToken" z="oUoIeIxNS6AKt2la3WyQRsBx7Zs="/>
+        <field:input field="expireTime" id="c_in_mused_api_domain_UserConnection_expireTime" validationMessageCode="field_invalid_integer" z="lwniVCE+22ivcdHUneEwhzwPqAU="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_in_mused_api_domain_UserConnection" render="${not empty dependencies}" z="Sekcy2jvUGE1TttZl+4ojezhCbU="/>
+</div>

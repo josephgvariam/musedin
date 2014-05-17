@@ -1,0 +1,43 @@
+CACHE MANIFEST
+
+# Time: Fri Jan 18 2013 18:57:33 GMT+0530 (IST)
+# This manifest was created by confess.js, http://github.com/jamesgpearce/confess
+#
+# Retrieved URL: http://localhost:3501/
+# User-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11
+#
+# Config:
+#  task: appcache
+#  userAgent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.12 Safari/535.11
+#  wait: 0
+#  consolePrefix: #
+#  verbose: true
+#  appcache:
+#   urlsFromDocument: true
+#   urlsFromRequests: false
+#   cacheFilter: .*
+#   networkFilter: null
+#  url: http://localhost:3501
+#  configFile: /usr/local/lib/node_modules/yeoman/lib/support/confess.json
+
+CACHE:
+http://localhost:3501/images/003014b1.icon-facebook.png
+http://localhost:3501/images/4d8d6e14.icon-twitter.png
+http://localhost:3501/img/glyphicons-halflings-white.png
+http://localhost:3501/img/glyphicons-halflings.png
+http://www.google-analytics.com/ga.js
+images/0d3d14bd.slide-03.jpg
+images/5952e42c.browser-icon-firefox.png
+images/74b25008.browser-icon-chrome.png
+images/96731689.browser-icon-safari.png
+images/c2ea4b3a.slide-02.jpg
+images/fd6eb14b.slide-01.jpg
+scripts/b498763f.plugins.js
+scripts/dd32c062.scripts.js
+scripts/vendor/cf69c6f2.modernizr.min.js
+styles/101205d0.bootstrap.css
+styles/b626be49.bootstrap-responsive.css
+styles/fd317d86.main.css
+
+NETWORK:
+*

@@ -1,0 +1,33 @@
+<project name="MusedInViews" default="dist" basedir=".">
+
+    <property name="app" location="app"/>
+    <property name="dist"  location="dist"/>
+
+    <target name="dist.old" depends="">
+    	<move todir="${app}" includeemptydirs="false">
+    	    <fileset dir="${app}"/>
+    	    <mapper type="glob" from="*.jsp" to="*.html"/>
+    	  </move>
+    </target>
+	
+    <target name="dist" depends="build">
+    	<move todir="${dist}" includeemptydirs="false">
+    	    <fileset dir="${dist}"/>
+    	    <mapper type="glob" from="*.html" to="*.jsp"/>
+    	  </move>
+    </target>
+
+	<target name="build">  
+		<exec executable="yeoman">
+		    <arg value="build:minify"/>
+		</exec>
+    </target>
+
+    <target name="clean">
+    	<exec executable="yeoman">
+    	    <arg value="clean"/>
+    	</exec>
+    </target>
+	
+</project>
+

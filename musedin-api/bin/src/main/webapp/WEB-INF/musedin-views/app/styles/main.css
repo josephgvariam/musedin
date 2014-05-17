@@ -1,0 +1,508 @@
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+
+
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+
+
+#signup-modal, #login-modal {
+  width: 300px;
+  padding: 0 40px;
+  background: #fff;
+  border: 5px solid rgba(0, 0, 0, 0.2);
+  margin-left: -190px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 1px 0 #fff inset;
+   }
+  #signup-modal h1, #login-modal h1 {
+    margin: 0 -40px;
+    background: #eee;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    font-size: 16px;
+    padding: 5px 40px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    text-align: center;
+    margin-bottom: 30px; }
+  #signup-modal h5, #login-modal h5 {
+    margin-top: 5px; }
+  #signup-modal form, #login-modal form {
+    text-align: center; }
+  #signup-modal .close, #login-modal .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 18px 16px 18px;
+    opacity: 0.8;
+    border-left: 1px solid #bbb; }
+  #signup-modal .signup-btn, #login-modal .signup-btn {
+    display: block;
+    border: 1px solid #136ac1;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 12px 30px 12px 0;
+    border-radius: 3px;
+    margin: 10px 0 25px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+    text-shadow: 0 1px 0 #1a64bf;
+    cursor: pointer;
+    text-align: left; }
+    #signup-modal .signup-btn i, #login-modal .signup-btn i {
+      height: 24px;
+      width: 20px;
+      background-size: 24px;
+      display: inline-block;
+      vertical-align: text-top;
+      margin-right: 15px;
+      border-right: 1px solid rgba(0, 0, 0, 0.1);
+      padding-right: 30px;
+      box-shadow: 1px 0 0px rgba(255, 255, 255, 0.2); }
+    #signup-modal .signup-btn:hover, #login-modal .signup-btn:hover {
+      box-shadow: 0 0 2px #ccc;
+      text-decoration: none; }
+  #signup-modal .signup-twitter, #login-modal .signup-twitter {
+    background-color: #0ba8d6;
+    background-image: -moz-linear-gradient(#35bfe7, #0ba8d6);
+    background-image: -o-linear-gradient(#35bfe7, #0ba8d6);
+    background-image: -ms-linear-gradient(#35bfe7, #0ba8d6);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #35bfe7), color-stop(1, #0ba8d6));
+    background-image: -webkit-linear-gradient(#35bfe7, #0ba8d6); }
+    #signup-modal .signup-twitter i, #login-modal .signup-twitter i {
+      background: url('/images/icon-twitter.png') center center no-repeat;
+      background-size: 32px auto; }
+  #signup-modal .signup-facebook, #login-modal .signup-facebook {
+    background-color: #4264b3;
+    background-image: -moz-linear-gradient(#679ace, #4264b3);
+    background-image: -o-linear-gradient(#679ace, #4264b3);
+    background-image: -ms-linear-gradient(#679ace, #4264b3);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #679ace), color-stop(1, #4264b3));
+    background-image: -webkit-linear-gradient(#679ace, #4264b3);
+    border-color: #1b345a;
+    text-shadow: 0 1px 0 #2d449e; }
+    #signup-modal .signup-facebook i, #login-modal .signup-facebook i {
+      background: url('/images/icon-facebook.png') center center no-repeat;
+      background-size: 14px auto; }
+  #signup-modal a, #login-modal a {
+    font-weight: normal; }
+    #signup-modal a span, #login-modal a span {
+      color: #777; }
+  #signup-modal fieldset, #login-modal fieldset {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 20px 40px 30px;
+    margin: 30px -40px 20px; }
+    #signup-modal fieldset input[type=submit], #login-modal fieldset input[type=submit] {
+      padding: 12px 0;
+      width: 300px;
+      margin-top: 15px;
+      font-size: 14px; }
+    #signup-modal fieldset input[type=text], #signup-modal fieldset input[type=password], #signup-modal fieldset input[type=email], #login-modal fieldset input[type=text], #login-modal fieldset input[type=password], #login-modal fieldset input[type=email] {
+      font-size: 14px;
+      color: #000;
+      padding: 10px 10px;
+      width: 280px;
+      box-shadow: inset 0 1px 1px #ddd;
+      margin-top: 10px; }
+    #signup-modal fieldset .email_suggestion, #login-modal fieldset .email_suggestion {
+      text-align: left;
+      margin: 2px 0 0 0;
+      color: #666; }
+      
+      
+      
+      
+          /*body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #f5f5f5;
+          }*/
+
+ .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }          
+.note {
+  text-align: center;
+  color: #999; }
+  .note a {
+    color: #666;
+    font-weight: bold; }
+
+#login #auth-form {
+  padding-top: 30px; }
+  #login #auth-form form {
+    margin: 0; }
+
+.accounts-form {
+  width: 520px;
+  padding: 30px 0 0 0;
+  margin: 90px auto 30px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 1px 6px #bbb;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 2px; }
+  .accounts-form h2 {
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: 26px;
+    color: #222; }
+  .accounts-form small {
+    color: #666; }
+  .accounts-form .errorlist {
+    list-style: none;
+    margin: 0 95px 15px; }
+  .accounts-form .connect-buttons {
+    margin: 20px 0; }
+    .accounts-form .connect-buttons .connect-button {
+      display: inline-block;
+      margin: 0px 10px 20px; }
+      .accounts-form .connect-buttons .connect-button .btn {
+        background: #0ba8d6;
+        color: #fff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+        padding: 0.6em;
+        font-weight: bold;
+        box-shadow: 0 0 0 5px #eee;
+        width: 13em; }
+      .accounts-form .connect-buttons .connect-button #twitter_button {
+        background: #0ba8d6;
+        border-color: #007ea3; }
+      .accounts-form .connect-buttons .connect-button #facebook_button {
+        background: #415d9c;
+        border-color: #3a5695; }
+  .accounts-form #auth-form {
+    background: #f4f4f4;
+    padding: 0 0 40px;
+    border-top: 1px solid #ddd;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: -moz-linear-gradient(#fefefe, #f4f4f4);
+    background-image: -o-linear-gradient(#fefefe, #f4f4f4);
+    background-image: -ms-linear-gradient(#fefefe, #f4f4f4);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fefefe), color-stop(1, #f4f4f4));
+    background-image: -webkit-linear-gradient(#fefefe, #f4f4f4);
+    -moz-border-radius-bottomleft: 2px;
+    -webkit-border-bottom-left-radius: 2px;
+    -ms-border-bottom-left-radius: 2px;
+    -o-border-bottom-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    -moz-border-radius-bottomright: 2px;
+    -webkit-border-bottom-right-radius: 2px;
+    -ms-border-bottom-right-radius: 2px;
+    -o-border-bottom-right-radius: 2px;
+    border-bottom-right-radius: 2px; }
+    .accounts-form #auth-form h3 {
+      margin: 1em 0 1em;
+      font-size: 16px;
+      font-weight: normal; }
+    .accounts-form #auth-form input[type=text], .accounts-form #auth-form input[type=password] {
+      font-size: 16px;
+      color: #000;
+      padding: 0.8em 0.8em;
+      width: 300px;
+      box-shadow: inset 0 1px 1px #ddd; }
+    .accounts-form #auth-form .input {
+      margin-bottom: 15px; }
+    .accounts-form #auth-form input[type=submit] {
+      padding: 15px 30px;
+      font-size: 16px;
+      padding: 0.8em 3em;
+      letter-spacing: 1px; }
+    .accounts-form #auth-form .email_suggestion {
+      width: 326px;
+      padding: 5px 0 0 0;
+      margin: 0 auto;
+      text-align: right;
+      font-style: italic; }
+
+@media (max-width: 768px) {
+  body {
+    background: #fff; }
+
+  .accounts-form {
+    padding: 0;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 50px; }
+    .accounts-form form {
+      background: 0; }
+    .accounts-form h2 {
+      padding: 0;
+      margin: 0;
+      font-size: 24px; }
+    .accounts-form #auth-form input {
+      width: 80% !important; } }
+      
+      
+
+        /* Custom container */
+        .container-narrow {
+          margin: 0 auto;
+          max-width: 700px;
+        }
+        .container-narrow > hr {
+          margin: 30px 0;
+        }
+
+        /* Main marketing message and sign up button */
+        .jumbotron {
+          margin: 60px 0;
+          text-align: center;
+        }
+        .jumbotron h1 {
+          font-size: 72px;
+          line-height: 1;
+        }
+        .jumbotron .btn {
+          font-size: 21px;
+          padding: 14px 24px;
+        }
+
+        /* Supporting marketing content */
+        /*
+        .marketing {
+          margin: 60px 0;
+        }*/
+        .marketing p + h4 {
+          margin-top: 28px;
+        }
+
+

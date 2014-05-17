@@ -1,0 +1,98 @@
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2012-12-18 19:30:59
+project --topLevelPackage in.mused.api --java 6
+mongo setup --databaseName musedin-db --username musedin --password BobMarley1945
+entity mongo --class ~.domain.Player --identifierType org.bson.types.ObjectId --testAutomatically 
+entity mongo --class ~.domain.Playlist --identifierType org.bson.types.ObjectId --testAutomatically
+entity mongo --class ~.domain.Library --identifierType org.bson.types.ObjectId --testAutomatically 
+entity mongo --class ~.domain.User --identifierType org.bson.types.ObjectId --testAutomatically
+entity mongo --class ~.domain.UserConnection --identifierType org.bson.types.ObjectId --testAutomatically
+repository mongo --interface ~.repository.PlayerRepository --entity ~.domain.Player
+repository mongo --interface ~.repository.PlaylistRepository --entity ~.domain.Playlist
+repository mongo --interface ~.repository.LibraryRepository --entity ~.domain.Library
+repository mongo --interface ~.repository.UserRepository --entity ~.domain.User
+repository mongo --interface ~.repository.UserConnectionRepository --entity ~.domain.UserConnection
+service --interface ~.service.PlayerService --entity ~.domain.Player
+service --interface ~.service.PlaylistService --entity ~.domain.Playlist
+service --interface ~.service.LibraryService --entity ~.domain.Library
+service --interface ~.service.UserService --entity ~.domain.User
+service --interface ~.service.UserConnectionService --entity ~.domain.UserConnection
+focus --class ~.domain.User
+field string --fieldName email --notNull 
+field string --fieldName password --notNull 
+field boolean --fieldName accountExpired --notNull 
+field boolean --fieldName accountLocked --notNull 
+field boolean --fieldName passwordExpired --notNull
+field boolean --fieldName enabled --notNull 
+field date --fieldName dateCreated --type java.util.Date --notNull
+field date --fieldName lastUpdated --type java.util.Date --notNull
+focus --class ~.domain.UserConnection
+field string --fieldName userId --notNull
+field string --fieldName providerId --notNull
+field string --fieldName providerUserId
+field number --fieldName rank --type int --min 1 --max 9999
+field string --fieldName displayName
+field string --fieldName profileUrl
+field string --fieldName imageUrl
+field string --fieldName accessToken --notNull
+field string --fieldName secret
+field string --fieldName refreshToken
+field number --fieldName expireTime --type java.lang.Long
+web mvc setup
+web mvc all --package ~.web
+json all
+web mvc json all 
+security setup
+perform eclipse
+service --interface ~.service.SecurityService --entity ~.domain.User
+exit
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log closed at 2012-12-21 14:23:23
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2012-12-28 20:09:00
+exit
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log closed at 2012-12-29 17:03:54
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2013-01-15 17:44:37
+focus --class ~.domain.Player
+field string --fieldName code --unique --notNull --sizeMin 5
+field boolean --fieldName active --primitive --notNull
+entity mongo --class ~.domain.Song --identifierType org.bson.types.ObjectId --testAutomatically 
+repository mongo --interface ~.repository.SongRepository --entity ~.domain.Song
+service --interface ~.service.SongService --entity ~.domain.Song
+field string --fieldName title --notNull 
+field string --fieldName artist
+field string --fieldName album
+// [failed] field string --fieldName year
+field string --fieldName year --permitReservedWords 
+field string --fieldName genre
+field string --fieldName comment
+field string --fieldName iconUrl
+focus --class ~.domain.Playlist
+field set --fieldName songs --type ~.domain.Song
+field set --fieldName songs --type ~.domain.Song --cardinality ONE_TO_MANY 
+focus --class ~.domain.Player
+field reference --fieldName playlist --type ~.domain.Playlist
+field reference --fieldName playlist --type ~.domain.Playlist --cardinality ONE_TO_ONE 
+// [failed] field reference --fieldName user --type ~.domain.User --cardinality ONE_TO_ONE 
+field reference --fieldName user --type ~.domain.User --cardinality ONE_TO_ONE --permitReservedWords 
+field string --fieldName userId --notNull 
+field set --fieldName playlist --type ~.domain.Song --cardinality ONE_TO_MANY 
+focus --class ~.domain.Song
+field number --fieldName upVotes --type int
+field number --fieldName downVotes --type int
+field string --fieldName url --notNull
+backup
+web mvc all --package ~.web
+json all
+web mvc json all
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2013-01-18 13:40:43
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2013-01-20 11:07:58
+exit
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log closed at 2013-01-21 23:39:09
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2013-01-22 10:14:25
+git config --automaticCommit false
+exit
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log closed at 2013-01-24 14:02:59
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2013-01-25 10:28:56
+git config --automaticCommit false
+exit
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log closed at 2013-01-26 13:04:23
+// Spring Roo 1.2.3.BUILD-SNAPSHOT [rev 7fd62b6] log opened at 2013-01-29 11:30:05
+git config --automaticCommit false

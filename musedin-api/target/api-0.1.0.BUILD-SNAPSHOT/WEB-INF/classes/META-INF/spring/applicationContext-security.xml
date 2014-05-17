@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security" 
+    xmlns:beans="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+        
+        
+        
+        
+    <!-- HTTP security configurations 
+    <http auto-config="true" use-expressions="true" create-session="never">
+        <form-login login-processing-url="/resources/j_spring_security_check" login-page="/login" authentication-failure-url="/login?login_error=t" />
+        <logout logout-url="/resources/j_spring_security_logout" />
+        <intercept-url pattern="/player/**" access="hasRole('ROLE_USER')" />
+        
+        <intercept-url pattern="/resources/**" access="permitAll" />
+        <intercept-url pattern="/**" access="permitAll" />
+    </http>
+    -->
+    
+    
+    <!-- Configure Authentication mechanism -->
+    <!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
+    <!-- 
+    <authentication-manager alias="authenticationManager">        
+        <authentication-provider>
+            <password-encoder hash="sha-256" />
+            <user-service>
+                <user name="admin" password="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" authorities="ROLE_ADMIN" />
+                <user name="user" password="04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb" authorities="ROLE_USER" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+     -->
+
+
+
+
+    <!--  >http auto-config="true" use-expressions="true" create-session="stateless">
+        <intercept-url pattern="/player/**" access="hasRole('ROLE_USER')" />
+        <intercept-url pattern="/players/**" access="hasRole('ROLE_USER')" />        
+        <intercept-url pattern="/resources/**" access="permitAll" />
+        <intercept-url pattern="/**" access="permitAll" />
+        
+        <http-basic />
+   		<custom-filter ref="digestFilter" after="BASIC_AUTH_FILTER" />
+    </http-->
+    
+<http pattern="/scripts/**" security="none"/>
+<http pattern="/styles/**" security="none"/>
+<http pattern="/images/**" security="none"/> 
+<http pattern="/favicon.ico" security="none"/> 
+<http pattern="/robots.txt" security="none"/>    
+
+	<http pattern="/api/**" create-session="stateless"  use-expressions="true" realm="MusedIn REST API">       
+        <intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		<http-basic />
+	</http>
+
+
+    <http auto-config="false" use-expressions="true" create-session="never">
+    	<intercept-url pattern="/" access="permitAll" />
+    	<intercept-url pattern="/resources/**" access="permitAll" />
+     	<intercept-url pattern="/login" access="permitAll" />
+     	<intercept-url pattern="/signin/facebook" access="permitAll" />
+     	<intercept-url pattern="/signin/twitter" access="permitAll" />
+     	<intercept-url pattern="/login" access="permitAll" />
+ 		<intercept-url pattern="/about" access="permitAll" />
+ 		<intercept-url pattern="/contact" access="permitAll" />
+ 		<intercept-url pattern="/contact-form" access="permitAll" />
+ 		
+        <intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+        <form-login login-processing-url="/resources/j_spring_security_check" login-page="/login" authentication-failure-url="/login?login_error=t" default-target-url="/player"/>
+        <logout logout-url="/resources/j_spring_security_logout" />
+    </http>
+    
+
+
+
+<beans:bean id="basicAuthenticationFilter" class="org.springframework.security.web.authentication.www.BasicAuthenticationFilter">
+  <beans:property name="authenticationManager" ref="authenticationManager"/>
+  <beans:property name="authenticationEntryPoint" ref="authenticationEntryPoint"/>
+</beans:bean>
+
+<beans:bean id="authenticationEntryPoint" class="org.springframework.security.web.authentication.www.BasicAuthenticationEntryPoint">
+  <beans:property name="realmName" value="musedin"/>
+</beans:bean>
+
+
+<beans:bean id="mipasswordencoder" class="in.mused.api.security.MusedinPasswordEncoder" />
+
+<beans:bean id="saltSource" class="org.springframework.security.authentication.dao.ReflectionSaltSource">
+	<beans:property name="userPropertyToUse" value="username"/>
+</beans:bean>
+     
+    
+    <authentication-manager alias="authenticationManager" >
+		<authentication-provider user-service-ref="securityServiceImpl">
+			<!-- >password-encoder hash="sha-256" / -->
+			<password-encoder ref="mipasswordencoder">
+				<salt-source ref="saltSource"/>
+			</password-encoder>  
+		</authentication-provider>
+	</authentication-manager>	
+	
+    
+    
+</beans:beans>

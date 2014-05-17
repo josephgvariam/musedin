@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_in_mused_api_domain_Song" modelAttribute="song" path="/songs" versionField="none" z="JXEuox+R+1RHYG3fXcVj6zbu9fY=">
+        <field:input field="title" id="c_in_mused_api_domain_Song_title" required="true" z="gbXgbqWFlWCQzqEWJ82imGXeJmI="/>
+        <field:input field="artist" id="c_in_mused_api_domain_Song_artist" z="OoZiAXHNSBKfyTd6b5EsDsPiyyw="/>
+        <field:input field="album" id="c_in_mused_api_domain_Song_album" z="DHLRZ/9tIXxga1LAmwNuuekrAGo="/>
+        <field:input field="year" id="c_in_mused_api_domain_Song_year" z="4+1z1/F8SScChHWhlLxxv6Gr7RY="/>
+        <field:input field="genre" id="c_in_mused_api_domain_Song_genre" z="wRoooo8R3R1vJ2FE26/TMT2DGEc="/>
+        <field:input field="comment" id="c_in_mused_api_domain_Song_comment" z="rZgQ89ArG8LBBeQRCcoGyxS9L5w="/>
+        <field:input field="iconUrl" id="c_in_mused_api_domain_Song_iconUrl" z="Jn2C92TvtiUCBZcBUSjKLPenVIk="/>
+        <field:input field="upVotes" id="c_in_mused_api_domain_Song_upVotes" z="+Rrcles/mg4EhZoA665NESlr0yQ="/>
+        <field:input field="downVotes" id="c_in_mused_api_domain_Song_downVotes" z="f48+fxaKq/i6768/VJbDQ3p36RY="/>
+        <field:input field="songUrl" id="c_in_mused_api_domain_Song_songUrl" required="true" z="xZ1ZbEEv0Gl3RYkihAJrjiWoYGk="/>
+    </form:update>
+</div>

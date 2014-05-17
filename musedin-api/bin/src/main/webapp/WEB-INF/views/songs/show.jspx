@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_in_mused_api_domain_Song" object="${song}" path="/songs" z="gEmHnazKLXDHth+p+z75Go+HRuc=">
+        <field:display field="title" id="s_in_mused_api_domain_Song_title" object="${song}" z="3bP7fVkkvwpfywgukGuBo0CARJ8="/>
+        <field:display field="artist" id="s_in_mused_api_domain_Song_artist" object="${song}" z="9USEHQWQ8pl7UVn3zJ+vc/yOrWU="/>
+        <field:display field="album" id="s_in_mused_api_domain_Song_album" object="${song}" z="eeaLCyfBmM+e6coWURwnK9lntIE="/>
+        <field:display field="year" id="s_in_mused_api_domain_Song_year" object="${song}" z="/A2dikQvw8MN4JkNUEy+7vrbxXs="/>
+        <field:display field="genre" id="s_in_mused_api_domain_Song_genre" object="${song}" z="7b2Bs1NCgNoEsIQrKF4trO1nHr4="/>
+        <field:display field="comment" id="s_in_mused_api_domain_Song_comment" object="${song}" z="4E4XqeNI2SmxhaWzfPm/wz43s+M="/>
+        <field:display field="iconUrl" id="s_in_mused_api_domain_Song_iconUrl" object="${song}" z="294jEsQ+itNr5I4Kchq4IGsb2Gs="/>
+        <field:display field="upVotes" id="s_in_mused_api_domain_Song_upVotes" object="${song}" z="2csv6rQVfUuUjD4Z/4Bl8IMdxDo="/>
+        <field:display field="downVotes" id="s_in_mused_api_domain_Song_downVotes" object="${song}" z="qezLsTDZ3k0NtdrzoZ4+z0xYFgA="/>
+        <field:display field="songUrl" id="s_in_mused_api_domain_Song_songUrl" object="${song}" z="L7bLur5lLFm+zFQSEU+gO9NLP88="/>
+    </page:show>
+</div>

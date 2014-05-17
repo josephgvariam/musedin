@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_in_mused_api_domain_User" modelAttribute="user" path="/users" versionField="none" z="p0Vli9PINXILC6Sr2t9MhueA19w=">
+        <field:input field="password" id="c_in_mused_api_domain_User_password" required="true" z="R9VHDySpG8cytKQDXju+p0flkns="/>
+        <field:checkbox field="accountExpired" id="c_in_mused_api_domain_User_accountExpired" z="ldffp9tEQNUW3aspbtWn4j6n8hg="/>
+        <field:checkbox field="accountLocked" id="c_in_mused_api_domain_User_accountLocked" z="VbRNNi5q6TxbtowH/dKqqKW65M0="/>
+        <field:checkbox field="passwordExpired" id="c_in_mused_api_domain_User_passwordExpired" z="frchomHbBYqnbPgaKlXl7IOQmqY="/>
+        <field:checkbox field="enabled" id="c_in_mused_api_domain_User_enabled" z="pGI1xeLB1+9jrKhKE3gaO/GhJyg="/>
+        <field:datetime dateTimePattern="${user_datecreated_date_format}" field="dateCreated" id="c_in_mused_api_domain_User_dateCreated" required="true" z="JDBS738PbbfcSEysDi+exs4AMiQ="/>
+        <field:datetime dateTimePattern="${user_lastupdated_date_format}" field="lastUpdated" id="c_in_mused_api_domain_User_lastUpdated" required="true" z="gV4lIpetx/21KPrgIY+/xowQ+lg="/>
+        <field:input field="location" id="c_in_mused_api_domain_User_location" z="XdIwtmV3WKzfY8mMwitq8TgtHdU="/>
+        <field:input field="roles" id="c_in_mused_api_domain_User_roles" required="true" z="o42IpH7Rc7hKUNKOi8pDrz4jiSY="/>
+        <field:input field="username" id="c_in_mused_api_domain_User_username" required="true" z="AiZ7ybaFymrj3K7lFBNXtf6wSMQ="/>
+        <field:input field="email" id="c_in_mused_api_domain_User_email" required="true" validationMessageCode="field_invalid_email" z="liOsl6m3rwOws3CUItQgWTGfa0Q="/>
+        <field:input field="displayname" id="c_in_mused_api_domain_User_displayname" required="true" z="Z6ZqWhLplfjCy5LKPxw4F/FDXLQ="/>
+        <field:input field="type" id="c_in_mused_api_domain_User_type" required="true" z="BCjP0BLunw3yW/3Gam7OtmGo7Iw="/>
+    </form:update>
+</div>

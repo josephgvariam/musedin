@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_in_mused_api_domain_Song" items="${songs}" z="GGir+gLdo4q4jP80G3SB3hGNxd0=">
+        <table:table data="${songs}" id="l_in_mused_api_domain_Song" path="/songs" z="UsLl3XfviQnf2ocnhXr8sUE3Pu4=">
+            <table:column id="c_in_mused_api_domain_Song_title" property="title" z="GpDRPdwS9+SfayXt6nT0eWosOPw="/>
+            <table:column id="c_in_mused_api_domain_Song_artist" property="artist" z="7kP6crKQGDmBkJjroe4kzsJgfmE="/>
+            <table:column id="c_in_mused_api_domain_Song_album" property="album" z="TG2+0JwQieW4daSCuOnCgSzLMKY="/>
+            <table:column id="c_in_mused_api_domain_Song_year" property="year" z="Hxy0btuvZGJLG+DjVkw1z9Zw6ZY="/>
+            <table:column id="c_in_mused_api_domain_Song_genre" property="genre" z="BTMg7cgZBtkur3ucoEj1XgteLZQ="/>
+            <table:column id="c_in_mused_api_domain_Song_fileName" property="fileName" z="zSYaDzKMDZQdM3mXgc2C6CpuzA0="/>
+        </table:table>
+    </page:list>
+</div>

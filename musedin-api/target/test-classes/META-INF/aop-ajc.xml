@@ -1,0 +1,31 @@
+<aspectj>
+<aspects>
+<aspect name="in.mused.api.domain.SongIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="in.mused.api.domain.SongDataOnDemand_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.LibraryIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="in.mused.api.domain.LibraryDataOnDemand_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.UserIntegrationTest_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.UserConnectionDataOnDemand_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.UserConnectionIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="in.mused.api.domain.SongIntegrationTest_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.ActivityIntegrationTest_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.PlaylistDataOnDemand_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.PlaylistDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="in.mused.api.domain.UserDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="in.mused.api.domain.UserIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="in.mused.api.domain.UserConnectionIntegrationTest_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.UserDataOnDemand_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.PlaylistIntegrationTest_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.SongDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="in.mused.api.domain.LibraryIntegrationTest_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.PlayerDataOnDemand_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.PlaylistIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="in.mused.api.domain.ActivityDataOnDemand_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.PlayerIntegrationTest_Roo_Configurable"/>
+<aspect name="in.mused.api.domain.UserConnectionDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="in.mused.api.domain.PlayerDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="in.mused.api.domain.LibraryDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="in.mused.api.domain.PlayerIntegrationTest_Roo_IntegrationTest"/>
+</aspects>
+</aspectj>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_in_mused_api_domain_User" items="${users}" z="fpYQHE0NZyO/pBUG8PK1wtuovDw=">
+        <table:table data="${users}" id="l_in_mused_api_domain_User" path="/users" z="GQJM20Ll+80WgoQiU5zZysIoAiw=">
+            <table:column id="c_in_mused_api_domain_User_password" property="password" z="QqttEkgmGYrSuRUENbD7kxhExI4="/>
+            <table:column id="c_in_mused_api_domain_User_accountExpired" property="accountExpired" z="LShtOt3BvjEbDGDYtCyLP8wvGe4="/>
+            <table:column id="c_in_mused_api_domain_User_accountLocked" property="accountLocked" z="3XzfzAVBDCtfNVz6Kw7ouXkMTI8="/>
+            <table:column id="c_in_mused_api_domain_User_username" property="username" z="6IbQdMIMtnrlxenDS8zsbTVspS4="/>
+            <table:column id="c_in_mused_api_domain_User_email" property="email" z="A6p/JfY27M+rrRyE+21GbzwrLQs="/>
+            <table:column id="c_in_mused_api_domain_User_passwordExpired" property="passwordExpired" z="D1wbyDh+6pUS+W3cRru5Z4CoKD8="/>
+        </table:table>
+    </page:list>
+</div>

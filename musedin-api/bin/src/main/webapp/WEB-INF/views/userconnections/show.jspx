@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_in_mused_api_domain_UserConnection" object="${userconnection}" path="/userconnections" z="QViA6bNCvZ6ACM0SJsDt5HWJBoU=">
+        <field:display field="userId" id="s_in_mused_api_domain_UserConnection_userId" object="${userconnection}" z="cZTuqFebUJ9bff2Ou9dLjpI59xY="/>
+        <field:display field="providerId" id="s_in_mused_api_domain_UserConnection_providerId" object="${userconnection}" z="DDh8No56VqHdATyB52S2+LGMYM0="/>
+        <field:display field="providerUserId" id="s_in_mused_api_domain_UserConnection_providerUserId" object="${userconnection}" z="iTKGoxygb8lnYg5Ngl8Rhr8sw/o="/>
+        <field:display field="rank" id="s_in_mused_api_domain_UserConnection_rank" object="${userconnection}" z="LBeHb3uI9qurBcFrs/YNfB11/6g="/>
+        <field:display field="displayName" id="s_in_mused_api_domain_UserConnection_displayName" object="${userconnection}" z="k8VX3Wp681mNn+Lb+lx8KJKN2Iw="/>
+        <field:display field="profileUrl" id="s_in_mused_api_domain_UserConnection_profileUrl" object="${userconnection}" z="PDz/yYDIcxLR5eq0sDwYyRAmwpA="/>
+        <field:display field="imageUrl" id="s_in_mused_api_domain_UserConnection_imageUrl" object="${userconnection}" z="6OHT0nAEKeprzan8iBRBMWZveL0="/>
+        <field:display field="accessToken" id="s_in_mused_api_domain_UserConnection_accessToken" object="${userconnection}" z="JkgPrI/ceyPrxuge4mHHFDtfgQA="/>
+        <field:display field="secret" id="s_in_mused_api_domain_UserConnection_secret" object="${userconnection}" z="Rm5y4U0J8TBx3kZvOf6e7sMkWp0="/>
+        <field:display field="refreshToken" id="s_in_mused_api_domain_UserConnection_refreshToken" object="${userconnection}" z="KRJ7fsn3C1nMlTq3Q4tUnPS7YbY="/>
+        <field:display field="expireTime" id="s_in_mused_api_domain_UserConnection_expireTime" object="${userconnection}" z="UGd0B3L0Cvr66e7T1r7bIMcr6yQ="/>
+    </page:show>
+</div>

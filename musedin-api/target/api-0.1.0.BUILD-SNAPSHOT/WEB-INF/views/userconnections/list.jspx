@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_in_mused_api_domain_UserConnection" items="${userconnections}" z="S7WkeBydNpfCTx7CO5+4EO1Rb4g=">
+        <table:table data="${userconnections}" id="l_in_mused_api_domain_UserConnection" path="/userconnections" z="vGFKwEFlY1OQPWtFeOrJ11xYKH0=">
+            <table:column id="c_in_mused_api_domain_UserConnection_userId" property="userId" z="bJ70GdGcOQP0IFBUx7feGFzyP2c="/>
+            <table:column id="c_in_mused_api_domain_UserConnection_providerId" property="providerId" z="kWEzHDLzgcMQulsK3fJhy72s/R8="/>
+            <table:column id="c_in_mused_api_domain_UserConnection_providerUserId" property="providerUserId" z="qpkLn7JhYvXv0YWGXih9zx/Y2/A="/>
+            <table:column id="c_in_mused_api_domain_UserConnection_rank" property="rank" z="yNLP1opwFPWd8VDP2LZlqmebCg8="/>
+            <table:column id="c_in_mused_api_domain_UserConnection_displayName" property="displayName" z="nOrrLLIrxtZhqGgHPwhA7RvIKRs="/>
+            <table:column id="c_in_mused_api_domain_UserConnection_profileUrl" property="profileUrl" z="4NMLGYIBBfDo8YxFGCClw6F5Ur0="/>
+        </table:table>
+    </page:list>
+</div>

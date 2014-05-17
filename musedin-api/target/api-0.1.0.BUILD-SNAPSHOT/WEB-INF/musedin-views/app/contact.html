@@ -1,0 +1,191 @@
+<%@ page session="false" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>MusedIn - Contact</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css styles/bootstrap.css -->
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/bootstrap-responsive.min.css">
+        <!-- endbuild -->
+
+        <!-- build:css styles/app.css -->
+        <link rel="stylesheet" href="styles/main.css">      
+        <!-- endbuild -->     
+        
+        <style type="text/css">
+        .navbar .brand {
+          padding: 10px 20px 10px;
+        }
+        .navbar .nav > li > a {
+        padding: 10px 20px;
+        }
+        #windowAlertModal .modal-footer {
+        text-align: center;
+        }
+        </style>
+
+    </head>
+    <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="/">MusedIn</a>
+          <div class="nav-collapse collapse">
+              <sec:authorize access="isAuthenticated()">
+                <div class="user-button btn-group pull-right">
+                  <a class="btn btn-primary btn-mini" href="#"><i class="icon-user icon-white"></i></a>
+                  <a class="btn btn-primary dropdown-toggle btn-mini" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="icon-pencil"></i> Profile</a></li>
+                    <li><a href="#"><i class="icon-user"></i> Account</a></li>
+                    <li><a href="#"><i class="icon-music"></i> Player</a></li>              
+                  </ul>
+                </div>
+
+                <p class="navbar-text pull-right">                
+                 ${username}
+                </p>  
+              </sec:authorize>
+            <ul class="nav">
+              <li><a href="/">Home</a></li>
+              <!--<li class="active"><a href="#">About</a></li>-->
+              <li><a href="player">Player</a></li>
+              <li class="active"><a href="contact">Contact</a></li>              
+            </ul>
+            <ul class="nav pull-right">
+              <li class="divider-vertical"></li> 
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="container-narrow">
+
+      <hr>
+
+      <div class="jumbotron">
+        <h1>Contact Us!</h1>
+        <p class="lead">If you have any comments or requests about MusedIn, please complete the following form. A member of the MusedIn team will respond to you as soon as possible. Also, feel free to contact us with service questions, partnership proposals, or media inquiries.</p>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid">
+        <div class="span12">
+          <form id="contact-form">
+            
+              <div class="span4">
+                <label>Name</label>
+                <input type="text" placeholder="Your Name" id="contact_name" required>
+                <label>Email</label>
+                <input type="email" placeholder="Your email address" id="contact_email" required>
+                <label>Subject
+                <select id="contact_subject" name="subject">
+                  <option value="na" selected="">Choose One:</option>
+                  <option value="service">General Customer Service</option>
+                  <option value="suggestions">Suggestions</option>
+                  <option value="product">Product Support</option>
+                </select>
+                </label>
+              </div>
+              <div class="span8">
+                <label>Message</label>
+                <textarea name="message" id="contact_message" class="input-block-level" rows="10"></textarea>
+              </div>
+            
+              <button type="submit" onSubmit="sendMessage();return false;" class="btn btn-primary pull-right">Send</button>
+            
+          </form>
+        </div>  
+      </div>
+
+      <hr>      
+
+
+
+      
+      <div class="footer">
+        <p>&copy; MusedIn 2013</p>
+      </div>
+
+
+
+    </div> <!-- /container -->
+
+        <!-- Add your site or application content here -->
+        
+        <!-- build:js scripts/scripts.js -->
+        <script src="scripts/vendor/jquery.min.js"></script>
+        <script src="scripts/vendor/bootstrap.min.js"></script>
+        <!-- endbuild -->  
+        
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34962603-1']);
+  _gaq.push(['_setDomainName', 'mused.in']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<script type="text/javascript">
+
+$(function(){
+  $('#contact-form').submit(function(){
+    
+    var contact = {
+      name: $('#contact_name').val(),
+      email: $('#contact_email').val(),
+      subject: $('#contact_subject').val(),
+      message: $('#contact_message').val()
+    };
+    $.getJSON("/contact-form", contact, function(data){
+      if(data.success){
+        $('#windowAlertModal').modal();
+      }
+    });
+
+    return false;
+  });
+
+
+});
+</script>
+
+    <div id="windowAlertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-body">
+      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <p> Your message has been sent. We'll get back to you soon.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-info" data-dismiss="modal" aria-hidden="true">OK</button>
+      </div>
+    </div>
+    
+
+</body>
+</html>

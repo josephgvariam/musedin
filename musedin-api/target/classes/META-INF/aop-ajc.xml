@@ -1,0 +1,62 @@
+<aspectj>
+<aspects>
+<aspect name="in.mused.api.service.SongServiceImpl_Roo_Service"/>
+<aspect name="in.mused.api.domain.Library_Roo_Mongo_Entity"/>
+<aspect name="in.mused.api.domain.User_Roo_JavaBean"/>
+<aspect name="in.mused.api.web.SongController_Roo_Controller"/>
+<aspect name="in.mused.api.service.LibraryService_Roo_Service"/>
+<aspect name="in.mused.api.domain.Activity_Roo_Mongo_Entity"/>
+<aspect name="in.mused.api.repository.SongRepository_Roo_Mongo_Repository"/>
+<aspect name="in.mused.api.domain.Player_Roo_Mongo_Entity"/>
+<aspect name="in.mused.api.domain.Activity_Roo_ToString"/>
+<aspect name="in.mused.api.domain.Song_Roo_JavaBean"/>
+<aspect name="in.mused.api.domain.User_Roo_Mongo_Entity"/>
+<aspect name="in.mused.api.domain.Library_Roo_Json"/>
+<aspect name="in.mused.api.domain.UserConnection_Roo_Mongo_Entity"/>
+<aspect name="in.mused.api.domain.Playlist_Roo_Mongo_Entity"/>
+<aspect name="in.mused.api.domain.Playlist_Roo_Json"/>
+<aspect name="in.mused.api.repository.LibraryRepository_Roo_Mongo_Repository"/>
+<aspect name="in.mused.api.domain.Activity_Roo_Json"/>
+<aspect name="in.mused.api.service.UserService_Roo_Service"/>
+<aspect name="in.mused.api.domain.Song_Roo_ToString"/>
+<aspect name="in.mused.api.repository.UserConnectionRepository_Roo_Mongo_Repository"/>
+<aspect name="in.mused.api.domain.Library_Roo_ToString"/>
+<aspect name="in.mused.api.domain.Player_Roo_ToString"/>
+<aspect name="in.mused.api.web.ActivityController_Roo_Controller"/>
+<aspect name="in.mused.api.domain.Player_Roo_JavaBean"/>
+<aspect name="in.mused.api.web.SongController_Roo_Controller_Json"/>
+<aspect name="in.mused.api.repository.UserRepository_Roo_Mongo_Repository"/>
+<aspect name="in.mused.api.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="in.mused.api.repository.PlaylistRepository_Roo_Mongo_Repository"/>
+<aspect name="in.mused.api.domain.User_Roo_Json"/>
+<aspect name="in.mused.api.domain.Playlist_Roo_JavaBean"/>
+<aspect name="in.mused.api.web.UserController_Roo_Controller"/>
+<aspect name="in.mused.api.service.SecurityServiceImpl_Roo_Service"/>
+<aspect name="in.mused.api.service.PlaylistService_Roo_Service"/>
+<aspect name="in.mused.api.web.LibraryController_Roo_Controller_Json"/>
+<aspect name="in.mused.api.domain.Playlist_Roo_ToString"/>
+<aspect name="in.mused.api.service.PlayerService_Roo_Service"/>
+<aspect name="in.mused.api.service.LibraryServiceImpl_Roo_Service"/>
+<aspect name="in.mused.api.repository.PlayerRepository_Roo_Mongo_Repository"/>
+<aspect name="in.mused.api.domain.UserConnection_Roo_Json"/>
+<aspect name="in.mused.api.service.UserServiceImpl_Roo_Service"/>
+<aspect name="in.mused.api.domain.UserConnection_Roo_JavaBean"/>
+<aspect name="in.mused.api.domain.Activity_Roo_JavaBean"/>
+<aspect name="in.mused.api.web.UserController_Roo_Controller_Json"/>
+<aspect name="in.mused.api.service.UserConnectionService_Roo_Service"/>
+<aspect name="in.mused.api.domain.User_Roo_ToString"/>
+<aspect name="in.mused.api.domain.Song_Roo_Mongo_Entity"/>
+<aspect name="in.mused.api.service.SongService_Roo_Service"/>
+<aspect name="in.mused.api.web.LibraryController_Roo_Controller"/>
+<aspect name="in.mused.api.service.UserConnectionServiceImpl_Roo_Service"/>
+<aspect name="in.mused.api.service.PlaylistServiceImpl_Roo_Service"/>
+<aspect name="in.mused.api.web.UserConnectionController_Roo_Controller"/>
+<aspect name="in.mused.api.web.PlaylistController_Roo_Controller"/>
+<aspect name="in.mused.api.service.PlayerServiceImpl_Roo_Service"/>
+<aspect name="in.mused.api.web.PlaylistController_Roo_Controller_Json"/>
+<aspect name="in.mused.api.domain.UserConnection_Roo_ToString"/>
+<aspect name="in.mused.api.service.SecurityService_Roo_Service"/>
+<aspect name="in.mused.api.web.UserConnectionController_Roo_Controller_Json"/>
+</aspects>
+</aspectj>
+
